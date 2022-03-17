@@ -25,6 +25,6 @@
 		String time = hour+":"+minute+":"+second+" "+ap;
 	%>
 	<p>현재 시간: <%=time%></p>
-	<a href="./response_data.jsp">Google 홈페이지로 이동하기</a>
+	<a href="./response_data.jsp">Google홈페이지로 이동하기</a>
 </body>
 </html>
