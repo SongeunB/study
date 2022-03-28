@@ -6,8 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<title>도서목록</title>
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css"/>
+<title>도서 목록</title>
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
@@ -26,7 +26,10 @@
 				ArrayList<Book> listOfBooks = bookDao.getAllBooks();
 				for (Book b:listOfBooks) {
 			%>
-			<div class="col-md-10">
+			<div class="col-md-2">
+				<img src="./resources/images/<%=b.getFileName()%>" style="width: 100%">
+			</div>
+			<div class="col-md-8">
 				<h4><%="["+b.getCategory()+"] " + b.getName()%></h4>
 				<br>
 				<p><%=b.getDescription()%>
@@ -40,6 +43,7 @@
 				}
 			%>
 		</div>
+		<hr>
 	</div>
 	<%@ include file="footer.jsp" %>
 </body>
