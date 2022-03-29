@@ -20,6 +20,7 @@ public class BookRepository {
 		book1.setUnitsInStock(1000);
 		book1.setTotalPages(150);
 		book1.setReleaseDate("2022.03.01");
+		book1.setFileName("P0001.jpg");
 
 		Book book2=new Book("B0002","쉽게 배우는 자바 프로그래밍",27000);
 		book2.setDescription("객체 지향의 핵심과 자바의 현대적 기능");
@@ -29,6 +30,7 @@ public class BookRepository {
 		book2.setUnitsInStock(900);
 		book2.setTotalPages(250);
 		book2.setReleaseDate("2021.03.14");
+		book2.setFileName("P0002.jpg");
 
 		Book book3=new Book("B0003","스프링4 입문",27000);
 		book3.setDescription("스프링은 아키텍쳐를 이해하는게 중요합니다!");
@@ -38,6 +40,7 @@ public class BookRepository {
 		book3.setUnitsInStock(600);
 		book3.setTotalPages(300);
 		book3.setReleaseDate("2020.12.25");
+		book3.setFileName("P0003.jpg");
 
 		listOfBooks.add(book1);
 		listOfBooks.add(book2);

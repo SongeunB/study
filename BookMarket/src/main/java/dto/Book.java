@@ -14,6 +14,7 @@ public class Book implements Serializable {
 	private long totalPages; //페이지 수 
 	private String releaseDate; //출판일(월/년)
 	private String condition; //신규,중고,E북
+	private String fileName ;
 	public Book() {
         super();
         // TODO Auto-generated constructor stub
@@ -89,4 +90,12 @@ public class Book implements Serializable {
 	public void setCondition(String condition) {
 		this.condition = condition;
 	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	
 }
