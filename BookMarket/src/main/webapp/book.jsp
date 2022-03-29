@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="dto.Book"%>
 <%@ page import="dao.BookRepository"%>
+<%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,13 +40,24 @@
 				<p><b>출판일</b> : <%=b.getReleaseDate()%></p>
 				<h3><%=b.getUnitPrice()%>원</h3>
 				
-				<p><a href="#" class="btn btn-primary">도서 주문</a>
-				<a href="./books.jsp" class="btn btn-secondary">상품 목록</a>
-				</p>
+				<p><form name="addForm" action="./addCart.jsp?id=<%=b.getBookId()%>" method="post">
+					<a href="#" class="btn btn-primary" onclick="addToCart()">도서 주문</a>
+					<a href="./cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>
+					<a href="./books.jsp" class="btn btn-secondary">상품 목록</a>
+					</form>
 			</div>
 		</div>		
 		<hr>
 	</div>
 	<%@ include file="footer.jsp" %>
 </body>
+<script type="text/javascript">
+	function addToCart() {
+		if (confirm("상품을 장바구니에 추가하시겠습니까?")) {
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+</script>
 </html>

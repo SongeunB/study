@@ -14,7 +14,9 @@ public class Book implements Serializable {
 	private long totalPages; //페이지 수 
 	private String releaseDate; //출판일(월/년)
 	private String condition; //신규,중고,E북
-	private String fileName ;
+	private String fileName; //이미지 파일명
+	private int quantity; //장바구니에 담은 갯수
+	
 	public Book() {
         super();
         // TODO Auto-generated constructor stub
@@ -96,6 +98,10 @@ public class Book implements Serializable {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	
-	
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 }
